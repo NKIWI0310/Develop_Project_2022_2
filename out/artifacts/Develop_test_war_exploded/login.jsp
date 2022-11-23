@@ -20,7 +20,7 @@
     <meta charset = "UTF-8">
     <meta name = "viewport" content=" = "width=device-width", initial-scale = "1">
     <title>Document</title>
-    <link rel = "stylesheet" href = "style.css">
+    <link rel = "stylesheet" href = "loginstyle.css">
     <script src = "jquery-3.4.1.js"></script>
 </head>
 
@@ -42,9 +42,12 @@
             </div>
 
         </form>
+
+
         <div class="caption">
-            <a href="">Register</a>
+            <a href="register.jsp">Register</a>
         </div>
+
         <div class="caption">
             <a href="">Forget Password?</a>
         </div>

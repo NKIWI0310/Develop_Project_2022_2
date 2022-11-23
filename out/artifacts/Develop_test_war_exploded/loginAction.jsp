@@ -10,9 +10,10 @@
 <%@ page import ="java.io.PrintWriter" %>
 <% request.setCharacterEncoding("UTF-8"); %>
 
-<jsp:useBean id="user" class = "user.User" scope = "page" />
+<jsp:useBean id="user" class = "user.User" scope = "session" />
 <jsp:setProperty name="user" property="student_id" />
 <jsp:setProperty name="user" property="password" />
+
 <html>
 <head>
     <title>JSP</title>
@@ -25,7 +26,7 @@
         if(result == 1){
             PrintWriter script = response.getWriter();
             script.println("<script>");
-            script.println("location.href = 'main.jsp'");
+            script.println("location.href = './mainpage/dist/mainpage.jsp'");
             script.println("</script>");
         }
         else if(result == 0){

@@ -3982,7 +3982,7 @@ textarea.form-control-lg {
   }
 }
 @media (min-width: 992px) {
-  .navbar-expand-lg {
+  .navbar-brand {
     flex-wrap: nowrap;
     justify-content: flex-start;
   }

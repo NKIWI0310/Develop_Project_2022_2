@@ -7,9 +7,9 @@ body{
     justify-content: center;
     align-items: center;
     height:100vh;
-    background: url("https://blog.kakaocdn.net/dn/oeIE7/btqCEOjglYY/Lbm6l1WBxFxlsKK1SrApDK/img.jpg") no-repeat center;
+    background: url('https://cdn.pixabay.com/photo/2020/11/07/01/40/abstract-5719530_960_720.jpg') no-repeat center;
+    /*https://blog.kakaocdn.net/dn/oeIE7/btqCEOjglYY/Lbm6l1WBxFxlsKK1SrApDK/img.jpg 보노보노*/
     background-size: cover;
-
 }
 
 /*body::before{*/
@@ -80,6 +80,3 @@ body{
     font-size : 15px ; color : #000000;
     text-decoration: none;
 }
-
-
-

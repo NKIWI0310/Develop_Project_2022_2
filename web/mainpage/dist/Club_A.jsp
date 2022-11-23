@@ -109,7 +109,6 @@
                     <td><%=phone_number%></td>
                     <td><%=entry_time%></td>
                     <td><%=exit_time%></td>
-                    <td><a href = "delete.jsp?entry_exit_id=<%=entry_exit_id%>">수정</a></td>
                     <td><a href = "delete.jsp?entry_exit_id=<%=entry_exit_id%>">삭제</a></td>
                 </tr>
                 <%

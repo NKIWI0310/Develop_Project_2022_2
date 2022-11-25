@@ -13,8 +13,9 @@ public class UserDAO {
 
     public UserDAO(){
         try{
-            String dbURL = "jdbc:mysql://localhost:3306/demo";
-            String dbID = "root";
+
+            String dbURL = "jdbc:mysql://3.34.132.31:52536/demo";
+            String dbID = "devpro";
             String dbPassword = "1234";
             Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
             conn = DriverManager.getConnection(dbURL,dbID,dbPassword);
@@ -42,7 +43,7 @@ public class UserDAO {
         return -2; //DB 오류
     }
     public int join(User user) {
-        String SQL = "INSERT INTO USER VALUES (?, ?, ?, ?, ?, ?)";
+        String SQL = "INSERT INTO demo.user VALUES (?, ?, ?, ?, ?, ?)";
         try {
             pstmt = conn.prepareStatement(SQL);
             pstmt.setString(1, user.getStudent_id());

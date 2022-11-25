@@ -28,6 +28,7 @@
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Bootstrap icons-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/jquery.battatech.excelexport.js"></script>
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
 </head>
@@ -80,8 +81,8 @@
                 <%
                     Connection conn = null;
 
-                    String url = "jdbc:mysql://localhost:3306/demo";
-                    String root = "root";
+                    String url = "jdbc:mysql://3.34.132.31:52536/demo";
+                    String root = "devpro";
                     String passwd = "1234";
 
                     Class.forName("com.mysql.cj.jdbc.Driver");
@@ -140,9 +141,15 @@
             <div class="d-flex justify-content-end">
                 <a href="Auto_exit.jsp" class="btn btn-primary">자동 퇴실 시간 추가</a>
             </div>
+            <div class="d-flex justify-content-start">
+                <a href="excel.jsp" class="btn btn-primary">Excel저장</a>
+            </div>
+
         </div>
     </div>
 </main>
+
+
 
 <!-- Bootstrap core JS-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>

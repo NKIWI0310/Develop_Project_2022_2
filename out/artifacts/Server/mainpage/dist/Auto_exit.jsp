@@ -18,8 +18,8 @@
     request.setCharacterEncoding("UTF-8");
     Connection conn = null;
 
-    String url = "jdbc:mysql://localhost:3306/demo";
-    String root = "root";
+    String url = "jdbc:mysql://3.34.132.31:52536/demo";
+    String root = "devpro";
     String passwd = "1234";
 
     Class.forName("com.mysql.cj.jdbc.Driver");

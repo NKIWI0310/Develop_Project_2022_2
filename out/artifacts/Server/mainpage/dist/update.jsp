@@ -24,7 +24,7 @@
     request.setCharacterEncoding("UTF-8");
     Connection conn = null;
 
-    String url = "jdbc:mysql://3.34.132.31:52536/demo";
+    String url = "jdbc:mysql://13.209.42.53:59870/demo";
     String root = "devpro";
     String passwd = "1234";
 

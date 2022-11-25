@@ -11,7 +11,7 @@ public class BoardDao {
     public int delete(int entry_exit_id) {
 
         try {
-            String dbURL = "jdbc:mysql://3.34.132.31:52536/demo";
+            String dbURL = "jdbc:mysql://13.209.42.53:59870/demo";
             String dbID = "devpro";
             String dbPassword = "1234";
             Class.forName("com.mysql.cj.jdbc.Driver").newInstance();

@@ -36,7 +36,7 @@ body{
 
 .int-area input {
     width : 100%;
-    padding: 20px 0px 10px ;
+    padding: 20px 10px 10px ;
     background-color:  transparent;
     border: none;
     border-bottom: 1px solid #999;
@@ -62,9 +62,9 @@ body{
     font-size:13px; color: #166cea;
 }
 
-.btn-area {position : relative; top : 10px; left : 10px} /*이거슨 처음 짠 버튼입네다*/
+.btn-area {position : relative; top : 10px; left : 10px;} /*이거슨 처음 짠 버튼입네다*/
 .btn-area button{
-    width : 50%; height : 40px;
+    width : 100%; height : 40px;
     background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
     color : #000000;
     font-size : 18px;
@@ -72,9 +72,9 @@ body{
     border-radius: 20px;
     cursor:pointer;
 }
-.btn-area2 {position : relative; top : -30px; left : 245px} /*이거슨 qr로 로그인 버튼입네다*/
+.btn-area2 {position : relative; top : 10px; left : 10px;} /*이거슨 qr로 로그인 버튼입네다*/
 .btn-area2 button{
-    width : 50%; height : 40px;
+    width : 100%; height : 40px;
     background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
     color : #000000;
     font-size : 18px;
@@ -82,7 +82,7 @@ body{
     border-radius: 20px;
     cursor:pointer;
 }
-.btn-area3 {position : relative; top : 10px; left : 0px} /*이거슨 레지스터 버튼입니다*/
+.btn-area3 {position : relative; top : 10px; left : 10px;} /*이거슨 레지스터 버튼입니다*/
 .btn-area3 button{
     width : 100%; height : 50px;
     background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
@@ -93,11 +93,38 @@ body{
     cursor:pointer;
 }
 .caption{
+    position: relative;top:50px; left:10px;
     margin-top : 20px;
     text-align: center;
 }
-
 .caption a {
-    font-size : 15px ; color : #000000;
+    font-size : 18px ; color : #000000;
     text-decoration: none;
+}
+.line{
+    position: relative; top:10px; left:10px;
+    display:flex;
+    flex-basis: 100%;
+    align-items:center;
+    color:rgba(0,0,0,0.35);
+    font-size:15px;
+    margin:15px 0px;
+}
+.line::before {
+    content:"";
+    flex-grow:1;
+    margin:0px 16px;
+    background: rgba(0,0,0,0.35);
+    height:1px;
+    font-size: 0px;
+    line-height: 0px;
+}
+.line::after {
+    content:"";
+    flex-grow:1;
+    margin:0px 16px;
+    background: rgba(0,0,0,0.35);
+    height:1px;
+    font-size: 0px;
+    line-height: 0px;
 }

@@ -25,37 +25,39 @@
 </head>
 
 <body>
-    <section class = "login-form">
-        <h1>LOGIN FORM</h1>
-        <form action = "loginAction.jsp">
-            <div class = "int-area">
-                <input type = "text" name = "student_id" autocomplete="off" required>
-                <label for = "student_id">USER NAME</label>
-            </div>
-            <div class = "int-area">
-                <input type = "password" name = "password" autocomplete="off" required>
-                <label for = "password">PASS WORD</label>
-            </div>
-            <div class = "btn-area">
-                <button type = "submit">LOGIN</button>
-            </div>
-        </form>
-
-        <form action = "QrLog.jsp">
-            <div class = "btn-area2">
-                <button type = "submit">Login as QR</button>
-            </div>
-        </form>
-
-
-        <div class="caption">
-            <a href="register.jsp">Register</a>
+<section class = "login-form">
+    <h1>Welcome</h1>
+    <form action = "loginAction.jsp">
+        <div class = "int-area">
+            <input type = "text" name = "student_id" autocomplete="off" required>
+            <label for = "student_id">ID</label>
+        </div>
+        <div class = "int-area">
+            <input type = "password" name = "password" autocomplete="off" required>
+            <label for = "password">PW</label>
+        </div>
+        <div class = "btn-area">
+            <button type = "submit">Sign-in</button>
+        </div>
+        <div class = "line">
+            OR
+        </div>
+        <div class = "btn-area2">
+            <button type = "submit">Sign-in with QR</button>
         </div>
 
-        <div class="caption">
-            <a href="QrLog.jsp">QrLogin</a>
-        </div>
-    </section>
+    </form>
+
+
+    <div class="caption">
+        <a href="register.jsp">Don't have an account? Sign-up</a>
+    </div>
+
+
+    <%--        <div class="caption">--%>
+    <%--            <a href="QrLog.jsp">QrLogin</a>--%>
+    <%--        </div>--%>
+    <%--    </section>--%>
 
     <script>
         let student_id = $('#student_id');

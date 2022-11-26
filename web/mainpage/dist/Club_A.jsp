@@ -7,6 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import ="user.UserDAO"%>
+<%@ page import="Board.BoardDao" %>
 <%@ page import ="java.io.PrintWriter" %>
 <% request.setCharacterEncoding("UTF-8"); %>
 
@@ -80,10 +81,10 @@
                 <tbody>
                 <%
                     Connection conn = null;
-
-                    String url = "jdbc:mysql://13.209.42.53:59870/demo";
-                    String root = "devpro";
-                    String passwd = "1234";
+                    BoardDao dao = new BoardDao();
+                    String url = dao.URL;
+                    String root = dao.ID;
+                    String passwd = dao.PW;
 
                     Class.forName("com.mysql.cj.jdbc.Driver");
                     conn = DriverManager.getConnection(url, root, passwd);

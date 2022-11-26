@@ -7,13 +7,16 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
 <%@ page import="java.sql.*" %>
+<%@ page import="Board.BoardDao" %>
 
 <%
     Connection conn = null;
 
-    String url = "jdbc:mysql://13.209.42.53:59870/demo";
-    String user = "devpro";
-    String passwd = "1234";
+    BoardDao dao = new BoardDao();
+
+    String url = dao.URL;
+    String user = dao.ID;
+    String passwd = dao.PW;
 
     Class.forName("com.mysql.cj.jdbc.Driver");
     conn = DriverManager.getConnection(url, user, passwd);

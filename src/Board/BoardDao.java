@@ -8,15 +8,15 @@ public class BoardDao {
     private PreparedStatement pstmt;
     private ResultSet rs;
 
-    public String URL = "jdbc:mysql://13.209.42.53:58255/demo";
+    public String URL = "jdbc:mysql://13.209.42.53:58736/demo";
     public String ID = "devpro";
     public String PW = "1234";
 
     public BoardDao(){
         try{
-            String dbURL = "jdbc:mysql://13.209.42.53:58255/demo";
-            String dbID = "devpro";
-            String dbPassword = "1234";
+            String dbURL = URL;
+            String dbID = ID;
+            String dbPassword = PW;
             Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
             conn = DriverManager.getConnection(dbURL,dbID,dbPassword);
         }catch (Exception e){

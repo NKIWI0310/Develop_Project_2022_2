@@ -57,19 +57,19 @@
                 </div>
                 <div class="form-floating my-3">
                     <input type="text" class="form-control" id="student_id" name="student_id" placeholder="학번을 입력하세요">
-                    <label for="student_id" class="form-lavel">학번</label>
+                    <label for="student_id" class="form-label">학번</label>
                 </div>
                 <div class="form-floating my-3">
                     <input type="text" class="form-control" id="phone_number" name="phone_number" placeholder="휴대폰 번호를 입력하세요">
-                    <label for="phone_number" class="form-lavel">휴대폰번호</label>
+                    <label for="phone_number" class="form-label">휴대폰번호</label>
                 </div>
                 <div class="form-floating my-3">
                     <input type="text" class="form-control" id="entry_time" name="entry_time" placeholder="출입시간을 입력하세요">
-                    <label for="entry_time" class="form-lavel">출입시간</label>
+                    <label for="entry_time" class="form-label">출입시간</label>
                 </div>
                 <div class="form-floating my-3">
                     <input type="text" class="form-control" id="exit_time" name="exit_time" placeholder="퇴실시간을 입력하세요">
-                    <label for="exit_time" class="form-lavel">퇴실시간</label>
+                    <label for="exit_time" class="form-label">퇴실시간</label>
                 </div>
 
 

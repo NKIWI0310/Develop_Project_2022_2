@@ -44,7 +44,7 @@
             ResultSet rs = null;
 
             try {
-                String sql = "SELECT entry_exit_id, name, student_id, phone_number, entry_time, exit_time FROM entry_exit";
+                String sql = "SELECT entry_exit_id, name, student_id, phone_number, entry_time, exit_time FROM entry_exit ORDER BY entry_time";
                 pstmt = conn.prepareStatement(sql);
                 rs = pstmt.executeQuery();
 

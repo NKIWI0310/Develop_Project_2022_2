@@ -14,7 +14,7 @@ public class UserDAO {
     public UserDAO(){
         try{
 
-            String dbURL = "jdbc:mysql://13.209.42.53:58255/demo";
+            String dbURL = "jdbc:mysql://13.209.42.53:58736/demo";
             String dbID = "devpro";
             String dbPassword = "1234";
             Class.forName("com.mysql.cj.jdbc.Driver").newInstance();

@@ -74,4 +74,4 @@
 </html>
 
 
-//http://localhost:8080/mainpage/dist/update.jsp?student_id=2019038024
+//http://localhost:8080/mainpage/dist/Auto_login.jsp?student_id=2019038024

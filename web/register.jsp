@@ -45,15 +45,15 @@
         <div class = "int-area">
             <input type = "phone_number" name = "phone_number" autocomplete="off" required>
             <label for = "phone_number">PHONE</label>
-            <div class = "int-area">
+        </div>
+        <div class = "int-area">
                 <input type = "club" name = "club" autocomplete="off" required>
                 <label for = "club">CLUB</label>
-            </div>
-            <div class = "int-area">
+        </div>
+        <div class = "int-area">
                 <input type = "email" name = "email" autocomplete="off" required>
                 <label for = "email">E-MAIL</label>
-            </div>
-
+        </div>
         <div class = "btn-area3">
             <button type = "submit">REGISTER</button>
         </div>

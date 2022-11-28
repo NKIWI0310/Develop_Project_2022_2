@@ -93,7 +93,7 @@
                     ResultSet rs = null;
 
                     try {
-                        String sql = "SELECT entry_exit_id, name, student_id, phone_number, entry_time, exit_time FROM entry_exit";
+                        String sql = "SELECT entry_exit_id, name, student_id, phone_number, entry_time, exit_time FROM entry_exit ORDER BY entry_time";
                         pstmt = conn.prepareStatement(sql);
                         rs = pstmt.executeQuery();
 
@@ -111,6 +111,7 @@
                     <td><%=phone_number%></td>
                     <td><%=entry_time%></td>
                     <td><%=exit_time%></td>
+                    <td><a href = "boardupdate.jsp?entry_exit_id=<%=entry_exit_id%>">수정</a></td>
                     <td><a href = "delete.jsp?entry_exit_id=<%=entry_exit_id%>">삭제</a></td>
                 </tr>
                 <%

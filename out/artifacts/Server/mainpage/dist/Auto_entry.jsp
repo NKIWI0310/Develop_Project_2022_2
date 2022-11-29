@@ -18,7 +18,8 @@
     BoardDao dao = new BoardDao();
     request.setCharacterEncoding("UTF-8");
     String student_id = user.getStudent_id();
-    dao.Auto_entry(student_id);
+    String table_number = request.getParameter("table_number");
+    dao.Auto_entry(student_id,table_number);
 //  실행 다 되고나면 첫 페이지로 돌아가게 만들기
-    response.sendRedirect("Club_A.jsp");
+    response.sendRedirect("mainpage.jsp");
 %>

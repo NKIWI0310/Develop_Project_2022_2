@@ -30,7 +30,7 @@
 
     Class.forName("com.mysql.cj.jdbc.Driver");
     conn = DriverManager.getConnection(url, root, passwd);
-
+    String table_number = request.getParameter("table_number");
     PreparedStatement pstmt = null;
 
     try {
@@ -48,7 +48,7 @@
         out.println("SQLException : " + e.getMessage());
     }
 
-    response.sendRedirect("Club_A.jsp");
+    response.sendRedirect("mainpage.jsp");
 %>
 
 

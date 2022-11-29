@@ -33,14 +33,15 @@
 
     Class.forName("com.mysql.cj.jdbc.Driver");
     conn = DriverManager.getConnection(url, root, passwd);
-
+    String table_number = request.getParameter("table_number");
     PreparedStatement pstmt = null;
     ResultSet rs = null;
 
     try {
-        String sql = "SELECT name, student_id, phone_number, entry_time, exit_time FROM entry_exit WHERE entry_exit_id = ? ";
+        String sql = "SELECT name, student_id, phone_number, entry_time, exit_time FROM entry_exit WHERE entry_exit_id = ? AND table_number = ?";
         pstmt = conn.prepareStatement(sql);
         pstmt.setInt(1, entry_exit_id);
+        pstmt.setString(2,table_number);
         rs = pstmt.executeQuery();
 
         while (rs.next()) {

@@ -42,10 +42,13 @@
         <div class = "line">
             OR
         </div>
+
+    </form>
+
+    <form action=" QrLog.jsp">
         <div class = "btn-area2">
             <button type = "submit">Sign-in with QR</button>
         </div>
-
     </form>
 
 

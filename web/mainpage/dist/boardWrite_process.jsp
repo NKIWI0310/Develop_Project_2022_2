@@ -28,17 +28,19 @@
     String phone_number = request.getParameter("phone_number");
     String entry_time = request.getParameter("entry_time");
     String exit_time = request.getParameter("exit_time");
+    String table_number = request.getParameter("table_number");
     PreparedStatement pstmt = null;
 //    INSERT 해줄거라서 rs 필요없음
 
     try {
-        String sql = "INSERT INTO entry_exit (name, student_id, phone_number, entry_time, exit_time) VALUES(?,?,?,?,?)";
+        String sql = "INSERT INTO entry_exit (name, student_id, phone_number, entry_time, exit_time, table_number) VALUES(?,?,?,?,?,?)";
         pstmt = conn.prepareStatement(sql);
         pstmt.setString(1, name);
         pstmt.setString(2, student_id);
         pstmt.setString(3, phone_number);
         pstmt.setString(4, entry_time);
         pstmt.setString(5, exit_time);
+        pstmt.setString(6, table_number);
         pstmt.executeUpdate();
 
     }
@@ -54,5 +56,5 @@
         }
     }
 //  실행 다 되고나면 첫 페이지로 돌아가게 만들기
-    response.sendRedirect("Club_A.jsp");
+    response.sendRedirect("mainpage.jsp");
 %>

@@ -40,9 +40,9 @@
         pstmt = conn.prepareStatement(sql);
         pstmt.setString(1,student_id);
         rs = pstmt.executeQuery();
-
+        String table_number = request.getParameter("table_number");
         while (rs.next()) {
-            sql = "INSERT INTO entry_exit (name, student_id, phone_number, entry_time) VALUES (?,?,?,now())";
+            sql = "INSERT INTO entry_exit (name, student_id, phone_number, entry_time, table_number) VALUES (?,?,?,DATE_ADD(now(), INTERVAL 9 HOUR),?)";
             pstmt = conn.prepareStatement(sql);
             String name = rs.getString("name");
             String phone_number = rs.getString("phone_number");
@@ -50,6 +50,7 @@
             pstmt.setString(1, "" + name);
             pstmt.setString(2, "" + student_id);
             pstmt.setString(3, "" + phone_number);
+            pstmt.setString(4, table_number);
             pstmt.executeUpdate();
         }
     }
@@ -64,8 +65,8 @@
             conn.close();
         }
     }
-//  실행 다 되고나면 첫 페이지로 돌아가게 만들기
-    response.sendRedirect("Club_A.jsp");
+//  실행 다 되고나면 메인페이지로 가게 만들기
+    response.sendRedirect("mainpage.jsp");
 
 %>
 <form>
@@ -74,4 +75,5 @@
 </html>
 
 
-//http://localhost:8080/mainpage/dist/Auto_login.jsp?student_id=2019038024
+//http://localhost:8080/mainpage/dist/Auto_login.jsp?student_id=2019038024&table_number=1  가정
+//&연산으로 다른 parameter 가져올수 있음

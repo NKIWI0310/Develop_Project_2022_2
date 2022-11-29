@@ -14,13 +14,14 @@
     int entry_exit_id = Integer.parseInt(request.getParameter("entry_exit_id"));
 
     BoardDao dao = new BoardDao();
-    int res = dao.delete(entry_exit_id);
+    String table_number = request.getParameter("table_number");
+    int res = dao.delete(entry_exit_id,table_number);
 
     if(res>0){
 %>
     <script>
         alert("삭제 성공");
-        location.href="Club_A.jsp";
+        location.href="mainpage.jsp";
     </script>
 <%
     }
@@ -28,7 +29,7 @@
 %>
     <script>
         alert("삭제 실패");
-        location.href="Club_A.jsp";
+        location.href="mainpage.jsp";
     </script>
 <%
     }

@@ -86,6 +86,8 @@
                     String root = dao.ID;
                     String passwd = dao.PW;
 
+                    String table_number = request.getParameter("table_number");
+
                     Class.forName("com.mysql.cj.jdbc.Driver");
                     conn = DriverManager.getConnection(url, root, passwd);
 
@@ -93,8 +95,9 @@
                     ResultSet rs = null;
 
                     try {
-                        String sql = "SELECT entry_exit_id, name, student_id, phone_number, entry_time, exit_time FROM entry_exit ORDER BY entry_time";
+                        String sql = "SELECT entry_exit_id, name, student_id, phone_number, entry_time, exit_time FROM entry_exit WHERE table_number = ? ORDER BY entry_time";
                         pstmt = conn.prepareStatement(sql);
+                        pstmt.setString(1,table_number);
                         rs = pstmt.executeQuery();
 
                         while (rs.next()) {
@@ -111,8 +114,8 @@
                     <td><%=phone_number%></td>
                     <td><%=entry_time%></td>
                     <td><%=exit_time%></td>
-                    <td><a href = "boardupdate.jsp?entry_exit_id=<%=entry_exit_id%>">수정</a></td>
-                    <td><a href = "delete.jsp?entry_exit_id=<%=entry_exit_id%>">삭제</a></td>
+                    <td><a href = "boardupdate.jsp?entry_exit_id=<%=entry_exit_id%>&table_number=<%=table_number%>">수정</a></td>
+                    <td><a href = "delete.jsp?entry_exit_id=<%=entry_exit_id%>&table_number=<%=table_number%>">삭제</a></td>
                 </tr>
                 <%
                         }
@@ -135,16 +138,16 @@
                 </tbody>
             </table>
             <div class="d-flex justify-content-end">
-                <a href="boardWrite.jsp" class="btn btn-primary">수동 추가</a>
+                <a href="boardWrite.jsp?table_number=<%=table_number%>" class="btn btn-primary">수동 추가</a>
             </div>
             <div class="d-flex justify-content-end">
-                <a href="Auto_entry.jsp" class="btn btn-primary">자동 출입 시간 추가</a>
+                <a href="Auto_entry.jsp?table_number=<%=table_number%>" class="btn btn-primary">자동 출입 시간 추가</a>
             </div>
             <div class="d-flex justify-content-end">
-                <a href="Auto_exit.jsp" class="btn btn-primary">자동 퇴실 시간 추가</a>
+                <a href="Auto_exit.jsp?table_number=<%=table_number%>" class="btn btn-primary">자동 퇴실 시간 추가</a>
             </div>
             <div class="d-flex justify-content-start">
-                <a href="excel.jsp" class="btn btn-primary">Excel저장</a>
+                <a href="excel.jsp?table_number=<%=table_number%>" class="btn btn-primary">Excel저장</a>
             </div>
 
         </div>

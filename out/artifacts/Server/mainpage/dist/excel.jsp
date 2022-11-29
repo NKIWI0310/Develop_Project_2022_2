@@ -39,13 +39,14 @@
 
             Class.forName("com.mysql.cj.jdbc.Driver");
             conn = DriverManager.getConnection(url, root, passwd);
-
+            String table_number = request.getParameter("table_number");
             PreparedStatement pstmt = null;
             ResultSet rs = null;
 
             try {
-                String sql = "SELECT entry_exit_id, name, student_id, phone_number, entry_time, exit_time FROM entry_exit ORDER BY entry_time";
+                String sql = "SELECT entry_exit_id, name, student_id, phone_number, entry_time, exit_time FROM entry_exit WHERE table_number = ? ORDER BY entry_time";
                 pstmt = conn.prepareStatement(sql);
+                pstmt.setString(1,table_number);
                 rs = pstmt.executeQuery();
 
                 while (rs.next()) {

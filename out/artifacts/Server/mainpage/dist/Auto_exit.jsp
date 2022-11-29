@@ -23,7 +23,7 @@
     String url = dao.URL;
     String root = dao.ID;
     String passwd = dao.PW;
-
+    String table_number = request.getParameter("table_number");
     Class.forName("com.mysql.cj.jdbc.Driver");
     conn = DriverManager.getConnection(url, root, passwd);
 
@@ -32,9 +32,10 @@
     try {
         String student_id = user.getStudent_id();
 
-        String sql = "UPDATE demo.entry_exit SET exit_time = now() WHERE (student_id = ?) ORDER BY entry_time DESC LIMIT 1";
+        String sql = "UPDATE demo.entry_exit SET exit_time = DATE_ADD(now(), INTERVAL 9 HOUR) WHERE student_id = ? AND table_number = ? ORDER BY entry_time DESC LIMIT 1";
         pstmt = conn.prepareStatement(sql);
         pstmt.setString(1,student_id);
+        pstmt.setString(2, table_number);
         pstmt.executeUpdate();
 
     }
@@ -50,5 +51,5 @@
         }
     }
 //  실행 다 되고나면 첫 페이지로 돌아가게 만들기
-    response.sendRedirect("Club_A.jsp");
+    response.sendRedirect("mainpage.jsp");
 %>

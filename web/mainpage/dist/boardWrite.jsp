@@ -44,13 +44,21 @@
     </div>
 </header>
 
+<%
+    String table_number = request.getParameter("table_number");
+%>
+
+
 
 <main class="container mt-5">
     <div class="row">
         <div class="col-sm-6 mx-auto">
-            <form action="boardWrite_process.jsp" method="post" class="border rounded-3 p-4">
+            <form action="boardWrite_process.jsp?" method="post" class="border rounded-3 p-4">
 
-
+                <div class="form-floating my-3">
+                    <input type="text" class="form-control" id="table_number" name="table_number" value = "<%=table_number%>">
+                    <label for="name" class="form-label">동아리 고유 번호 " 변경하지 마세요" </label>
+                </div>
                 <div class="form-floating my-3">
                     <input type="text" class="form-control" id="name" name="name" placeholder="이름을 입력하세요">
                     <label for="name" class="form-label">이름</label>

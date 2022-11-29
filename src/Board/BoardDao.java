@@ -8,7 +8,7 @@ public class BoardDao {
     private PreparedStatement pstmt;
     private ResultSet rs;
 
-    public String URL = "jdbc:mysql://13.209.42.53:58736/demo";
+    public String URL = "jdbc:mysql://3.35.21.26:51613/demo";
     public String ID = "devpro";
     public String PW = "1234";
 
@@ -23,15 +23,15 @@ public class BoardDao {
             e.printStackTrace();
         }
     }
-    public int delete(int entry_exit_id) {
+    public int delete(int entry_exit_id,String table_number) {
         int res = 0;
 
-        String SQL = "DELETE FROM entry_exit WHERE entry_exit_id = ?";
+        String SQL = "DELETE FROM entry_exit WHERE entry_exit_id = ? AND table_number = ?";
 
         try{
             pstmt = conn.prepareStatement(SQL);
             pstmt.setInt(1,entry_exit_id);
-
+            pstmt.setString(2,table_number);
             res = pstmt.executeUpdate();
 
         }catch(SQLException e){
@@ -48,7 +48,7 @@ public class BoardDao {
         return res;
     }
 
-    public void Auto_entry(String student_id){
+    public void Auto_entry(String student_id, String table_number){
         try {
 
             String sql = "SELECT name, phone_number FROM user WHERE student_id = ?";
@@ -57,7 +57,7 @@ public class BoardDao {
             rs = pstmt.executeQuery();
 
             while (rs.next()) {
-                sql = "INSERT INTO entry_exit (name, student_id, phone_number, entry_time) VALUES (?,?,?,now())";
+                sql = "INSERT INTO demo.entry_exit (name, student_id, phone_number, entry_time, table_number ) VALUES (?,?,?,DATE_ADD(now(), INTERVAL 9 HOUR),?)";
                 pstmt = conn.prepareStatement(sql);
                 String name = rs.getString("name");
                 String phone_number = rs.getString("phone_number");
@@ -65,6 +65,7 @@ public class BoardDao {
                 pstmt.setString(1, "" + name);
                 pstmt.setString(2, "" + student_id);
                 pstmt.setString(3, "" + phone_number);
+                pstmt.setString(4, table_number);
                 pstmt.executeUpdate();
             }
         }

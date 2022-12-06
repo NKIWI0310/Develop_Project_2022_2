@@ -8,7 +8,7 @@ public class BoardDao {
     private PreparedStatement pstmt;
     private ResultSet rs;
 
-    public String URL = "jdbc:mysql://3.35.21.26:51613/demo";
+    public String URL = "jdbc:mysql://3.35.21.26:58332/demo";
     public String ID = "devpro";
     public String PW = "1234";
 

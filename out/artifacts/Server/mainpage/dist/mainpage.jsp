@@ -43,7 +43,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item"><a class="nav-link active" aria-current="page" href="/mainpage/dist/mainpage.jsp">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#!">Mypage</a></li>
+                <li class="nav-item"><a class="nav-link" href="/mainpage/dist/mypage.jsp">Mypage</a></li>
                 <li class="nav-item"><a class="nav-link" href="/login.jsp">LogOut</a></li>
             </ul>
         </div>
@@ -78,7 +78,7 @@
             <div class="col-lg-6 col-xxl-4 mb-5">
                 <div class="card bg-light border-0 h-100">
                     <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
-                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-patch-check"></i></div>
+                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><a class="bi bi-patch-check" href="./Club_A.jsp?table_number=2"></a></div>
                         <h2 class="fs-4 fw-bold">B동아리</h2>
                         <p class="mb-0">동아리 설명</p>
                     </div>
@@ -87,7 +87,7 @@
             <div class="col-lg-6 col-xxl-4 mb-5">
                 <div class="card bg-light border-0 h-100">
                     <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
-                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-patch-check"></i></div>
+                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><a class="bi bi-patch-check"  href="./Club_A.jsp?table_number=3"></a></div>
                         <h2 class="fs-4 fw-bold">C동아리</h2>
                         <p class="mb-0">동아리 설명</p>
                     </div>
@@ -96,7 +96,7 @@
             <div class="col-lg-6 col-xxl-4 mb-5">
                 <div class="card bg-light border-0 h-100">
                     <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
-                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-patch-check"></i></div>
+                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><a class="bi bi-patch-check" href="./Club_A.jsp?table_number=4"></a></div>
                         <h2 class="fs-4 fw-bold">D동아리</h2>
                         <p class="mb-0">동아리 설명</p>
                     </div>
@@ -105,7 +105,7 @@
             <div class="col-lg-6 col-xxl-4 mb-5">
                 <div class="card bg-light border-0 h-100">
                     <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
-                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-patch-check"></i></div>
+                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><a class="bi bi-patch-check" href="./Club_A.jsp?table_number=5"></a></div>
                         <h2 class="fs-4 fw-bold">E동아리</h2>
                         <p class="mb-0">동아리 설명</p>
                     </div>
@@ -114,7 +114,7 @@
             <div class="col-lg-6 col-xxl-4 mb-5">
                 <div class="card bg-light border-0 h-100">
                     <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
-                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-patch-check"></i></div>
+                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><a class="bi bi-patch-check" href="./Club_A.jsp?table_number=6"></a></div>
                         <h2 class="fs-4 fw-bold">F동아리</h2>
                         <p class="mb-0">동아리 설명</p>
                     </div>

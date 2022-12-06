@@ -28,6 +28,7 @@
 <section class = "login-form">
     <h1>Welcome</h1>
     <form action = "loginAction.jsp">
+
         <div class = "int-area">
             <input type = "text" name = "student_id" autocomplete="off" required>
             <label for = "student_id">ID</label>
@@ -45,12 +46,11 @@
 
     </form>
 
-    <form action=" QrLog.jsp">
+    <form action = "QrLog.jsp">
         <div class = "btn-area2">
             <button type = "submit">Sign-in with QR</button>
         </div>
     </form>
-
 
     <div class="caption">
         <a href="register.jsp">Don't have an account? Sign-up</a>

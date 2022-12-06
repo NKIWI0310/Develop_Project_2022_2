@@ -46,7 +46,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item"><a class="nav-link active" aria-current="page" href="/mainpage/dist/mainpage.jsp">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#!">Mypage</a></li>
+                <li class="nav-item"><a class="nav-link" href="/mainpage/dist/mypage.jsp">Mypage</a></li>
                 <li class="nav-item"><a class="nav-link" href="/login.jsp">LogOut</a></li>
             </ul>
         </div>
@@ -61,7 +61,7 @@
 <header class="container mt-3">
     <div class="p-5 mb-4 bg-light rounded-3">
         <div class="container-fluid py-4">
-            <h1 class="text-center">A동아리 출입대장</h1>
+            <h1 class="text-center">동아리 출입대장</h1>
         </div>
     </div>
 </header>
@@ -137,17 +137,18 @@
                 %>
                 </tbody>
             </table>
+
             <div class="d-flex justify-content-end">
-                <a href="boardWrite.jsp?table_number=<%=table_number%>" class="btn btn-primary">수동 추가</a>
+                <a href="Auto_entry.jsp?table_number=<%=table_number%>" class="btn btn-primary">출입시간 추가</a>
             </div>
             <div class="d-flex justify-content-end">
-                <a href="Auto_entry.jsp?table_number=<%=table_number%>" class="btn btn-primary">자동 출입 시간 추가</a>
+                <a href="Auto_exit.jsp?table_number=<%=table_number%>" class="btn btn-primary">퇴실시간 추가</a>
             </div>
             <div class="d-flex justify-content-end">
-                <a href="Auto_exit.jsp?table_number=<%=table_number%>" class="btn btn-primary">자동 퇴실 시간 추가</a>
+                <a href="boardWrite.jsp?table_number=<%=table_number%>" class="btn btn-primary">수동으로 추가</a>
             </div>
-            <div class="d-flex justify-content-start">
-                <a href="excel.jsp?table_number=<%=table_number%>" class="btn btn-primary">Excel저장</a>
+            <div class="d-flex justify-content-end">
+                <a href="excel.jsp?table_number=<%=table_number%>" class="btn btn-primary">엑셀시트 저장</a>
             </div>
 
         </div>

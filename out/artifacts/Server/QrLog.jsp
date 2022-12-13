@@ -21,24 +21,34 @@
     color:#fff;
     padding:20px;
   }
+  body{
+    background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+    width: 100%;
+    height: 100%;
+  }
   .row{
+    width: 100%;
+    height: 100%;
     display:flex;
+    justify-content: center;
+    align-items: center;
   }
 </style>
 <div class="row">
   <div class="col">
-    <div style="width:500px; text-align: center;border: none; border-radius: 20px; cursor:pointer;" id="reader"> </div>
-
+    <div style="width:500px; text-align: center;border:0.4em inset #C7EAFD;border-radius: 20px; cursor:pointer;  " id="reader"> </div>
+    <%--    position: relative; left:674px;top: 340px;--%>
   </div>
-  <div class="col" style="padding:300px;">
-<%--    <h4>SCAN RESULT</h4>--%>
-<%--    <div id="result">Result Here</div>--%>
+  <div class="col" style="padding:0px;">
+    <%--    <h4>SCAN RESULT</h4>--%>
+    <%--    <div id="result">Result Here</div>--%>
   </div>
 </div>
 <script type="text/javascript">
   function onScanSuccess(qrCodeMessage) {
     // document.getElementById('result').innerHTML = '<span class="result">' + qrCodeMessage + '</span>';
     location.replace(qrCodeMessage);
+    html5QrcodeScanner.clear();
   }
   function onScanError(errorMessage) {
     //handle scan error

@@ -7,6 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import ="user.UserDAO"%>
+<%@ page import="Board.BoardDao" %>
 <%@ page import ="java.io.PrintWriter" %>
 <% request.setCharacterEncoding("UTF-8"); %>
 
@@ -34,6 +35,7 @@
 
 <%
     String id = user.getStudent_id();
+
 %>
 <!-- Responsive navbar-->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">

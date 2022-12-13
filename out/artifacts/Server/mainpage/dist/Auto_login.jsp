@@ -33,25 +33,41 @@
 
     PreparedStatement pstmt = null;
     ResultSet rs = null;
+    ResultSet trs = null;
 
     try {
-
         String sql = "SELECT name, phone_number FROM user WHERE student_id = ?";
         pstmt = conn.prepareStatement(sql);
         pstmt.setString(1,student_id);
         rs = pstmt.executeQuery();
         String table_number = request.getParameter("table_number");
-        while (rs.next()) {
-            sql = "INSERT INTO entry_exit (name, student_id, phone_number, entry_time, table_number) VALUES (?,?,?,DATE_ADD(now(), INTERVAL 9 HOUR),?)";
-            pstmt = conn.prepareStatement(sql);
-            String name = rs.getString("name");
-            String phone_number = rs.getString("phone_number");
 
-            pstmt.setString(1, "" + name);
-            pstmt.setString(2, "" + student_id);
-            pstmt.setString(3, "" + phone_number);
-            pstmt.setString(4, table_number);
+        sql = "SELECT * FROM entry_exit WHERE student_id = ? AND exit_time is null ORDER BY entry_time DESC LIMIT 1";
+        pstmt = conn.prepareStatement(sql);
+        pstmt.setString(1,student_id);
+        trs = pstmt.executeQuery();
+
+        if(trs.next()) {
+            sql = "UPDATE demo.entry_exit SET exit_time = DATE_ADD(now(), INTERVAL 9 HOUR) WHERE (entry_exit_id = ?)";
+            pstmt = conn.prepareStatement(sql);
+            int eei = trs.getInt("entry_exit_id");
+            pstmt.setInt(1,eei);
             pstmt.executeUpdate();
+        }
+        else
+        while (rs.next()) {
+
+                sql = "INSERT INTO entry_exit (name, student_id, phone_number, entry_time, table_number) VALUES (?,?,?,DATE_ADD(now(), INTERVAL 9 HOUR),?)";
+                pstmt = conn.prepareStatement(sql);
+                String name = rs.getString("name");
+                String phone_number = rs.getString("phone_number");
+
+                pstmt.setString(1, "" + name);
+                pstmt.setString(2, "" + student_id);
+                pstmt.setString(3, "" + phone_number);
+                pstmt.setString(4, table_number);
+                pstmt.executeUpdate();
+
         }
     }
     catch (SQLException e) {

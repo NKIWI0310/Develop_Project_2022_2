@@ -48,6 +48,7 @@
   function onScanSuccess(qrCodeMessage) {
     // document.getElementById('result').innerHTML = '<span class="result">' + qrCodeMessage + '</span>';
     location.replace(qrCodeMessage);
+    html5QrcodeScanner.clear();
   }
   function onScanError(errorMessage) {
     //handle scan error

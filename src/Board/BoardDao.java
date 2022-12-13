@@ -8,10 +8,10 @@ public class BoardDao {
     private PreparedStatement pstmt;
     private ResultSet rs;
 
-    public String URL = "jdbc:mysql://3.35.21.26:58332/demo";
+    public String URL = "jdbc:mysql://43.201.30.169:53709/demo";
     public String ID = "devpro";
     public String PW = "1234";
-
+    public int Auto_entry = 0;
     public BoardDao(){
         try{
             String dbURL = URL;
